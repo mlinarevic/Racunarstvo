@@ -1,0 +1,37 @@
+<html style="margin: 0; padding:0;">
+	<head>
+		<!--Napisati HTML stranicu s pripadajućim JS funkcijom koja ima dva ulazna argumenta (brojčane vrijednosti), Funkcija zatim ispisuje aritmetičku sredinu između ta dva broja.-->
+		<meta charset="utf-8">
+	</head>
+	<body style="margin: 0; padding:0;">
+		
+		<form style="width:500px; margin:10 auto; text-align: center;">
+			<h1 align="center">Aritimetička sredina brojeva</h1>
+			<input type="text" id="prviBroj" style="width:55%; margin:10 0;text-align:center;" placeholder="Unesite prvi broj">
+			<input type="text" id="drugiBroj" style="width:55%; margin:10 auto;text-align:center;" placeholder="Unesite drugi broj">
+			<input type="text" id="rezultat" style="width:55%; margin:10 auto;text-align:center;" placeholder="Rezultat" disabled="true"><br>
+			<button type="button" onclick="aritimetickaSredina('prviBroj', 'drugiBroj')">Izracunaj</button>
+		</form>
+
+		<script type="text/javascript">			
+			function aritimetickaSredina(num1,num2){
+				var a = document.getElementById(num1).value;
+				var b = document.getElementById(num2).value;
+				if(a != 0 && b != 0){
+					if(!Number.isInteger(parseInt(a)) || !Number.isInteger(parseInt(b))){
+						window.alert("Uneseni znakovi nisu brojevi. Ponovite unos.");
+					}
+					else{
+						var rez = eval(a) + eval(b);
+						rez = rez / 2;
+
+						document.getElementById('rezultat').value = rez;
+					}
+				}
+				else{
+				window.alert("Prazno polje. Unesite brojeve.");
+			}
+			}
+		</script>
+	</body>
+</html>

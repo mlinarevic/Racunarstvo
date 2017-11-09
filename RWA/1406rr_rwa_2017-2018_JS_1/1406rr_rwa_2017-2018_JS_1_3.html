@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<!--Napisati JS/HTML program koji generira sljedeći ispis unutar preglednika putem JS koda. JS kod računa faktorijel za svaki broj do broja koji unesemo kao argument funkcije.Program mora imati sljedeću strukturu –prvo definirati funkciju za faktorijelkoja radi ispiskao u prozoru ispod (ovoje npr poziv funkcije za 9koji je predan kao argument funkcije)-->
+		<script type="text/javascript">
+			function izracunajFaktorijel(n){
+				var a=1;
+				for(var i=1; i<=n; i++){
+					a *= i;
+				}
+				return a;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Table of Factorials</h1>
+		<script type="text/javascript">
+			for(var i=1; i<=9; i++){
+				document.write(i+"! = " + izracunajFaktorijel(i) + "<br>");
+			}		
+		</script>
+	</body>
+</html>

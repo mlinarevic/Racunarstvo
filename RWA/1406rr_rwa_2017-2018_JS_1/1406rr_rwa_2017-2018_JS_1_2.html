@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<!--Napisati JS program koji ispisuje parne brojeve od 1 do 20 te njihove kvadrate-->
+		<script type="text/javascript">
+			var N=20;
+			function jeLiParan(i){
+				if(i%2==0)
+				{
+					return 0;
+				}
+			}
+			function ispisiParne(){
+				document.write("Parni brojevi:<br><br>");
+				for(i=1; i<=N; i++){
+					if(jeLiParan(i) == 0){
+						document.write(i);
+						document.write("<br>");
+					}
+				}
+			}
+			function ispisiKvadrate(){
+				document.write("Kvadrati parnih brojeva:<br><br>");
+				for(i=1; i<=N; i++){
+					if(jeLiParan(i) == 0){
+						document.write("Kvadrat broja " + i + " je " + i*i +".");
+						document.write("<br>");
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			ispisiParne();
+			document.write("<br>");
+			ispisiKvadrate();
+		</script>
+	</body>
+</html>
